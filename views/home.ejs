@@ -10,10 +10,8 @@
 	<button onclick="sendMessage()"> Send message</button>
 	<h1></h1>
 	<script> 
-		// const socket = io('http://localhost:3001')\
-		var HOST = location.origin.replace(/^http/, 'ws')
-
-		const socket = io(HOST)
+		// const socket = io('http://localhost:3001')
+		const socket = io()
 
 		socket.on('connection') //check logs
 		socket.on("message", (data) => {
