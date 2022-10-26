@@ -10,7 +10,9 @@
 	<button onclick="sendMessage()"> Send message</button>
 	<h1></h1>
 	<script> 
-		const socket = io('http://localhost:3001')
+		// const socket = io('http://localhost:3001')\
+		const socket = io('http://localhost:' + process.env.PORT)
+
 		socket.on('connection') //check logs
 		socket.on("message", (data) => {
 			document.querySelector('h1').innerHTML = data
