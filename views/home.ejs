@@ -11,7 +11,7 @@
 	<h1></h1>
 	<script> 
 		// const socket = io('http://localhost:3001')\
-		const socket = io('https://pasikalbek.herokuapp.com:' + process.env.PORT || 8080)
+		const socket = io('https://pasikalbek.herokuapp.com:' + process.env.PORT || '8080')
 
 		socket.on('connection') //check logs
 		socket.on("message", (data) => {
